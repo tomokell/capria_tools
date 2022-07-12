@@ -1,4 +1,6 @@
 # Combined Angiography and Perfusion using Radial Imaging and Arterial Spin Labeling (CAPRIA) Tools
+[![DOI](https://zenodo.org/badge/513092852.svg)](https://zenodo.org/badge/latestdoi/513092852)
+
 Matlab code for CAPRIA signal simulation (e.g. for flip angle schedule optimisation) and image reconstruction.
 ## CAPRIA Signal Simulation (*models*)
 Included here are some simple models for both the angiographic and perfusion signal, including effects from a train of excitation pulses with constant or variable flip angles (assuming a spoiled gradient echo was used). Currently, dispersion is ignored, but we plan to include this soon. Calculations use standard angiographic and perfusion signal models (referenced below) modified to account for the signal attenuation and changes in the amount of excited transverse magnetisation present with a variable flip angle readout. 
@@ -114,7 +116,7 @@ Mark Chiew: https://orcid.org/0000-0001-6272-8783
 
 ## How to cite
 
-Thomas W Okell and Mark Chiew. *Combined Angiography and Perfusion using Radial Imaging and Arterial Spin Labeling (CAPRIA) Tools* (2022). https://github.com/tomokell/capria_tools/
+Okell, Thomas W, & Chiew, Mark. (2022). Combined Angiography and Perfusion using Radial Imaging and Arterial Spin Labeling (CAPRIA) Tools: Initial release (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.6821643
 
 ## Copyright
 
