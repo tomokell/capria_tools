@@ -42,7 +42,7 @@ In addition, the recon scripts require:
 - `NUFFT` operators within the Image Reconconstruction Toolbox (IRT) by Jeff Fessler and colleagues: [[Download here]](http://web.eecs.umich.edu/~fessler/irt) [[GitHub link]](https://github.com/JeffFessler/mirt)
 - `FSL` Matlab tools and utilities for saving results to Nifti format: [[Download here]](https://fsl.fmrib.ox.ac.uk)
 
-Note that we make heavy use of a subset of Mark Chiew's Matlab image reconstruction code, which is included here for simplicity, but the full set can be found [here](https://users.fmrib.ox.ac.uk/~mchiew/Tools.html).
+Note that we make heavy use of a subset of Mark Chiew's Matlab image reconstruction code, which is included here for simplicity, but the full set can be found [here](https://users.fmrib.ox.ac.uk/~mchiew/Tools.html) or [here](https://github.com/mchiew/recon-tools-matlab).
 
 ## References
 A 2D implementation of CAPRIA was described in:
