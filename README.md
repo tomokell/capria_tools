@@ -53,6 +53,10 @@ A preprint describing a 4D extension to CAPRIA and its optimisation using a quad
 
 - *Okell, T. W. & Chiew, M. Optimization of 4D Combined Angiography and Perfusion using Radial Imaging and Arterial Spin Labeling. bioRxiv. (2022) doi:10.1101/2022.07.13.499856. [[bioRxiv link](http://biorxiv.org/lookup/doi/10.1101/2022.07.13.499856)]*
 
+Code and data to reproduce the statistical analyses and figures in the preprint can be found here:
+
+- *Okell, Thomas W & Chiew, Mark. 4D Combined Angiography and Perfusion using Radial Imaging and Arterial Spin Labeling (CAPRIA): Data and Code to Reproduce Statistics and Figures. (Zenodo, 2022). doi:10.5281/ZENODO.6823138.* [[Zenodo link](https://zenodo.org/record/6823138)]
+
 The angiographic signal model uses a modified version of the kinetic model described in:
 
 - *Okell, T. W., Chappell, M. A., Schulz, U. G. & Jezzard, P. A kinetic model for vessel-encoded dynamic angiography with arterial spin labeling. Magnetic Resonance in Medicine 68, 969–979 (2012).*
