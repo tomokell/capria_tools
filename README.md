@@ -49,6 +49,10 @@ A 2D implementation of CAPRIA was described in:
 
 - *Okell, T. W. Combined angiography and perfusion using radial imaging and arterial spin labeling. Magnetic Resonance in Medicine 81, 182–194 (2019).*
 
+A preprint describing a 4D extension to CAPRIA and its optimisation using a quadratic variable flip angle schedule and LLR reconstruction is also now available:
+
+- *Okell, T. W. & Chiew, M. Optimization of 4D Combined Angiography and Perfusion using Radial Imaging and Arterial Spin Labeling. bioRxiv. (2022) doi:10.1101/2022.07.13.499856. [[bioRxiv link](http://biorxiv.org/lookup/doi/10.1101/2022.07.13.499856)]*
+
 The angiographic signal model uses a modified version of the kinetic model described in:
 
 - *Okell, T. W., Chappell, M. A., Schulz, U. G. & Jezzard, P. A kinetic model for vessel-encoded dynamic angiography with arterial spin labeling. Magnetic Resonance in Medicine 68, 969–979 (2012).*
