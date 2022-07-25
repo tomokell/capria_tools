@@ -8,7 +8,7 @@ Included here are some simple models for both the angiographic and perfusion sig
 Angiographic or perfusion signals can be calculated using calls to `CAPRIASignalSimple.m`. Some examples are given in `ExampleCAPRIASignalSimulations.m`. 
 
 ## CAPRIA image reconstruction (*recon*)
-This code allows a variety of techniques to be used to reconstruction CAPRIA angiograms and/or perfusion images from raw k-space data in Siemens twix (meas.dat) format. This includes:
+This code allows a variety of techniques to be used to reconstruct CAPRIA angiograms and/or perfusion images from raw k-space data in Siemens twix (meas.dat) format. This includes:
 - Extracting the relevant parts of the raw data
 - Phase correction
 - Construction of an "anatomical" image, using the mean label/control data
