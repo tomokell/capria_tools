@@ -419,7 +419,7 @@ elseif flags.calc_anat
     q.anat = SoSM;
     
     % Save to Nifti
-    SaveCAPRIAToNifti(SoSM,'anat',scales,CentreSlcOffset);
+    SaveCAPRIAToNifti(SoSM,'anat',scales,CentreSlcOffset,[],shift);
     
     % Report timing
     t = toc; disp(['-- Anatomical construction took ' ns(t/60/60) ' hours'])
@@ -451,7 +451,7 @@ elseif flags.calc_sens
     save('sens','sens','-v7.3');
     
     % ...and a Nifti file
-    SaveCAPRIAToNifti(sens,'sens',scales,CentreSlcOffset);
+    SaveCAPRIAToNifti(sens,'sens',scales,CentreSlcOffset,[],shift);
     
     % Report timing
     t = toc; disp(['-- Coil sensitivity estimation took ' ns(t/60/60) ' hours'])
@@ -533,7 +533,7 @@ elseif flags.regrid
     save('resr','imgr','-v7.3')
     
     % ...and to Nifti
-    SaveCAPRIAToNifti(abs(imgr),'resr',scales,CentreSlcOffset);
+    SaveCAPRIAToNifti(abs(imgr),'resr',scales,CentreSlcOffset,[],shift);
     
     % Report timing
     t = toc; disp(['-- Regridding recon took ' ns(t/60/60) ' hours'])
@@ -627,7 +627,7 @@ elseif flags.sense
     save('resS','imgS','-v7.3')
     
     % Save to Nifti
-    SaveCAPRIAToNifti(abs(imgS),'resS',scales,CentreSlcOffset);
+    SaveCAPRIAToNifti(abs(imgS),'resS',scales,CentreSlcOffset,[],shift);
 
     % Report timing
     t = toc; disp(['-- SENSE recon took ' ns(t/60/60) ' hours'])
@@ -672,7 +672,7 @@ elseif flags.L2
     save('resL2','imgL2','-v7.3')
     
     % Save as Nifti
-    SaveCAPRIAToNifti(abs(imgL2),'resL2',scales,CentreSlcOffset);
+    SaveCAPRIAToNifti(abs(imgL2),'resL2',scales,CentreSlcOffset,[],shift);
 
     % Report timing
     t = toc; disp(['-- L2 recon took ' ns(t/60/60) ' hours'])
@@ -717,7 +717,7 @@ elseif flags.xf
     save('resxf','imgxf','-v7.3');
     
     % Save to Nifti
-    SaveCAPRIAToNifti(abs(imgxf),'resxf',scales,CentreSlcOffset);
+    SaveCAPRIAToNifti(abs(imgxf),'resxf',scales,CentreSlcOffset,[],shift);
     
     % Report timing
     t = toc; disp(['-- xf recon took ' ns(t/60/60) ' hours'])
@@ -753,7 +753,7 @@ elseif flags.LLR
     save('resLLR','imgLLR','-v7.3');
     
     % Save to Nifti
-    SaveCAPRIAToNifti(abs(imgLLR),'resLLR',scales,CentreSlcOffset);
+    SaveCAPRIAToNifti(abs(imgLLR),'resLLR',scales,CentreSlcOffset,[],shift);
     
     % Report timing
     t = toc; disp(['-- LLR recon took ' ns(t/60/60) ' hours'])
@@ -789,7 +789,7 @@ elseif flags.xTV
     save('resxTV','imgxTV','-v7.3');
     
     % Save to Nifti
-    SaveCAPRIAToNifti(abs(imgxTV),'resxTV',scales,CentreSlcOffset);
+    SaveCAPRIAToNifti(abs(imgxTV),'resxTV',scales,CentreSlcOffset,[],shift);
     
     % Report timing
     t = toc; disp(['-- xTV recon took ' ns(t/60/60) ' hours'])
@@ -826,7 +826,7 @@ elseif flags.xTVtL2
     save('resxTVtL2','imgxTVtL2','-v7.3');
     
     % Save to Nifti
-    SaveCAPRIAToNifti(abs(imgxTVtL2),'resxTVtL2',scales,CentreSlcOffset);
+    SaveCAPRIAToNifti(abs(imgxTVtL2),'resxTVtL2',scales,CentreSlcOffset,[],shift);
 
     % Report timing
     t = toc; disp(['-- xTVtL2 recon took ' ns(t/60/60) ' hours'])
@@ -865,7 +865,7 @@ elseif flags.LnS
     save('resLnS','imgLnS','-v7.3');
     
     % Save to Nifti
-    SaveCAPRIAToNifti(abs(imgLnS),'resLnS',scales,CentreSlcOffset);
+    SaveCAPRIAToNifti(abs(imgLnS),'resLnS',scales,CentreSlcOffset,[],shift);
     
     % Report timing
     t = toc; disp(['-- L+S recon took ' ns(t/60/60) ' hours'])

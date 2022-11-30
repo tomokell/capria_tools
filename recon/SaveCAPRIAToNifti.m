@@ -5,20 +5,23 @@
 % imaging region relative to isocentre (in mm, only deals with
 % translations, not oblique imaging slices), CopyGeomFromFName defines a
 % file name to copy geometry information (voxel sizes, orientation, FOV
-% offset etc.) from (overrides Scales and CentreSliceOffset).
+% offset etc.) from (overrides Scales and CentreSliceOffset). Shift defines
+% a voxel shift vector used for the CAPRIA recon which must be accounted
+% for when saving out to a file.
 %
 % Tom Okell, June 2022
 %
 % [OutMagFName OutPhFName] = SaveCAPRIAToNifti(RawIms, OutFileName, Scales, ...
-%                                              CentreSliceOffset, CopyGeomFromFName)
+%                                              CentreSliceOffset, CopyGeomFromFName, shift)
 
 function [OutMagFName, OutPhFName] = SaveCAPRIAToNifti(RawIms, OutFileName, Scales, ...
-                                                       CentreSliceOffset, CopyGeomFromFName)
+                                                       CentreSliceOffset, CopyGeomFromFName, shift)
   
 % Deal with optional arguments
 if (nargin < 3) || (sum(isnan(Scales))>0); Scales = [1 1 1 1]; end
 if nargin < 4; CentreSliceOffset = [0 0 0]; end
 if nargin < 5; CopyGeomFromFName = []; end
+if nargin < 6; shift = []; end
 
 % Concatenate label/control/encoding cycles in the fifth/later dimensions
 disp('Concatenating cycles...')
@@ -33,7 +36,17 @@ Scales = Scales(PermOrder(1:4));
     
 disp(['Size of output image is now: ' ns(size(OutIm))])
 disp(['Scales are now: ' ns(Scales(:)')])
-    
+
+% Update the CentreSliceOffset to account for the shift used in the
+% reconstruction
+if ~isempty(shift)
+    % Account for the default shift
+    S = size(RawIms);
+    shift = (shift - floor(S(1:3)/2)).* [-1 -1 1]; % Also switch sign for x and y
+    shift = shift(PermOrder(1:3)); % Permute as above
+    CentreSliceOffset = CentreSliceOffset + reshape(shift .* reshape(Scales(1:3),size(shift)),size(CentreSliceOffset));
+end
+
 % Flip dimensions to ensure consistent representation 
 disp('Flipping y dimension...')
 OutIm = flip(OutIm,2);    
