@@ -45,17 +45,17 @@ In addition, the recon scripts require:
 Note that we make heavy use of a subset of Mark Chiew's Matlab image reconstruction code, which is included here for simplicity, but the full set can be found on his [website](https://users.fmrib.ox.ac.uk/~mchiew/Tools.html) or on [GitHub](https://github.com/mchiew/recon-tools-matlab).
 
 ## References
-A 2D implementation of CAPRIA was described in:
+A manuscript describing an implementation of 4D CAPRIA and optimisation using variable flip angle schedules and an LLR reconstruction has been accepted for publication in Magnetic Resonance in Medicine:
+
+- *Okell, T. W. & Chiew, M. Optimization of 4D Combined Angiography and Perfusion using Radial Imaging and Arterial Spin Labeling. Magnetic Resonance in Medicine. (2022) doi:10.1002/mrm.29558. [[DOI link](https://doi.org/10.1002/mrm.29558)]*
+
+A 2D implementation of CAPRIA was previously described in:
 
 - *Okell, T. W. Combined angiography and perfusion using radial imaging and arterial spin labeling. Magnetic Resonance in Medicine 81, 182–194 (2019).*
 
-A preprint describing a 4D extension to CAPRIA and its optimisation using a quadratic variable flip angle schedule and LLR reconstruction is also now available:
-
-- *Okell, T. W. & Chiew, M. Optimization of 4D Combined Angiography and Perfusion using Radial Imaging and Arterial Spin Labeling. bioRxiv. (2022) doi:10.1101/2022.07.13.499856. [[bioRxiv link](http://biorxiv.org/lookup/doi/10.1101/2022.07.13.499856)]*
-
 Code and data to reproduce the statistical analyses and figures in the preprint can be found here:
 
-- *Okell, Thomas W & Chiew, Mark. 4D Combined Angiography and Perfusion using Radial Imaging and Arterial Spin Labeling (CAPRIA): Data and Code to Reproduce Statistics and Figures. (Zenodo, 2022). doi:10.5281/ZENODO.6823138.* [[Zenodo link](https://zenodo.org/record/6823138)]
+- *Okell, Thomas W & Chiew, Mark. 4D Combined Angiography and Perfusion using Radial Imaging and Arterial Spin Labeling (CAPRIA): Data and Code to Reproduce Statistics and Figures. (Zenodo, 2022). doi:10.5281/zenodo.7390441.* [[Zenodo link](https://zenodo.org/record/7390441)]
 
 The angiographic signal model uses a modified version of the kinetic model described in:
 
