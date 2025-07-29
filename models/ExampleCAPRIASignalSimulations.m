@@ -183,3 +183,36 @@ plot(2,9,'ro','MarkerFaceColor','r'); plot(6,6,'ko','MarkerFaceColor','k');
 xlabel 'Starting flip angle, \alpha_1/\circ'; ylabel 'Final flip angle, \alpha_N/\circ';
 title 'F) Combined optimisation'; caxis([0 1])
 toLegend([2 3 4],{'CFA constraint','VFA optimum','CFA optimum'},'best');
+
+%% Example signal simulations incorporating dispersion
+VFAAlpha = [2 9];   % VFA flip angles start and finish (alpha1 and alphaN, degs)
+
+% Angiographic physiological parameters
+Aparams.v = 1;          % Volume fraction occupied by macrovasculature
+Aparams.delta_t = 0.75; % Macrovascular transit time (s)
+Aparams.s    =   10; % s^-1
+Aparams.p    =   0.1; % s
+
+% Perfusion physiological parameters
+Pparams.Deltat = 1.5;   % Arterial transit time to tissue (s)
+Pparams.f = 60;         % CBF (ml/100g/min)
+Pparams.s = Aparams.s;
+Pparams.p = Aparams.p;
+
+% Angio VFA with dispersion
+VFA_SigAdisp = CAPRIASignalDisp('Angio','Quadratic',VFAAlpha,tstart,tau,t0,NsegsA,NphasesA,TR,Aparams,true,true);
+
+% Perfusion VFA with dispersion
+VFA_SigPdisp = CAPRIASignalDisp('Perf' ,'Quadratic',VFAAlpha,tstart,tau,t0,NsegsP,NphasesP,TR,Pparams,true,true);
+
+%% Plot
+LargeFigWindow(0.4,0.9); subplot(1,2,1); 
+plot(t,VFA_SigA, t, VFA_SigAdisp,'linewidth',2); title 'Example angiographic signals'
+hold on; ylims = get(gca,'ylim'); plot([t0 t0],ylims,'k--'); xlim([min(t) max(t)])
+ylabel 'ASL signal'; xlabel 'Time/s'; 
+
+subplot(1,2,2)
+plot(t,VFA_SigP, t, VFA_SigPdisp,'linewidth',2); title 'Example perfusion signals'
+hold on; ylims = get(gca,'ylim'); plot([t0 t0],ylims,'k--'); xlim([min(t) max(t)])
+ylabel 'ASL signal'; xlabel 'Time/s'; 
+leg = {'No dispersion','With dispersion'}; legend(leg,'location','north')
