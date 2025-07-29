@@ -44,6 +44,8 @@ In addition, the recon scripts require:
 
 Note that we make heavy use of a subset of Mark Chiew's Matlab image reconstruction code, which is included here for simplicity, but the full set can be found on his [website](https://users.fmrib.ox.ac.uk/~mchiew/Tools.html) or on [GitHub](https://github.com/mchiew/recon-tools-matlab).
 
+For some of the plotting, we have also included the handy utility `hatchfill2` and associated license, but the original version can be found [here](https://uk.mathworks.com/matlabcentral/fileexchange/53593-hatchfill2).
+
 ## References
 A manuscript describing an implementation of 4D CAPRIA and optimisation using variable flip angle schedules and an LLR reconstruction has been accepted for publication in Magnetic Resonance in Medicine:
 
