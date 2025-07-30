@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Simple script to echo a command before running it
+#
+# Tom Okell, July 2025
+
+CMD=$*
+echo $CMD
+
+# Only execute the command if the DEBUG flag is not set
+if [ -z $DEBUG ]; then
+    $CMD
+fi

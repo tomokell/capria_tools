@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Run FSL's applywarp to downsample masks/PVE maps etc. but correctly accounting for 
+# partial voluming
+#
+# Tom Okell, July 2025
+
+# Check that all the arguments were supplied
+if [ $# -ne 4 ] ; then
+    echo "usage: $0  input_image  ref_image  out_image  xfm_matrix"
+    exit -1
+fi
+
+# Declare variables
+IN=$1
+REF=$2
+OUT=$3
+XFM=$4
+
+# Apply the warp, accounting for partial volume effects
+todo applywarp --ref=$REF --in=$IN --out=$OUT --premat=$XFM --super --interp=spline --superlevel=4
