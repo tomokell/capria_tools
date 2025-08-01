@@ -3,10 +3,13 @@
 
 Matlab code for CAPRIA/CAPRIA+S signal simulation (e.g. for flip angle schedule optimisation), image reconstruction and signal quantification.
 
-## CAPRIA Signal Simulation (*models*)
+## Brief Explanation
+Combined Angiography and Perfusion using Radial Imaging and Arterial Spin Labeling (CAPRIA) is an MRI method that allows the simultaneous and non-invasive acquisition of time-resolved 3D angiograms and perfusion images. This has recently been extended to allow the reconstruction of T1-weighted structural images (CAPRIA+S) from the same raw k-space dataset. See references below for more details.
+
+## CAPRIA+S Signal Simulation (*models*)
 Included here are some models for angiographic, perfusion and structural signals, including effects from a train of excitation pulses with constant or variable flip angles (assuming a spoiled gradient echo was used). Models with and without dispersion are now included. Calculations use standard angiographic, perfusion and static tissue relaxation signal models (referenced below) modified to account for the signal attenuation and changes in the amount of excited transverse magnetisation present with a variable flip angle readout. 
 
-Angiographic or perfusion signals can be calculated using calls to `CAPRIASignalSimple.m` (no dispersion) or `CAPRIASignalDisp.m` (with dispersion). Some examples are given in `ExampleCAPRIASignalSimulations.m`. 
+Angiographic or perfusion signals can be calculated using calls to `CAPRIASignalSimple.m` (no dispersion) or `CAPRIASignalDisp.m` (with dispersion). Some examples are given in `ExampleCAPRIASignalSimulations.m`. The static tissue signal can be simulated at the acquired timepoints using `CAPRIAStaticSignal.m`, or a more complete (but time-consuming) simulation of the full evolution of the magnetisation (blood and static tissue) can be run using `CompareCAPRIAandCAPRIAplusSSignals.m`, which relies on a simple Bloch equation simulator (which can be found [here](https://github.com/tomokell/bloch_sim)).
 
 ## CAPRIA+S image reconstruction (*recon*)
 This code allows a variety of techniques to be used to reconstruct CAPRIA(+S) angiograms, perfusion images and/or structural images from raw k-space data in Siemens twix (meas.dat) format. This includes:
@@ -49,7 +52,10 @@ Tested using MATLAB 2017b, 2019a and 2024b. Some scripts may rely on the followi
 - Image Processing Toolbox
 - Statistics and Machine Learning Toolbox
 
-In addition, the recon scripts require:
+In addition, some of the simulation scripts require:
+- a simple Bloch equation simulator (which can be found [here](https://github.com/tomokell/bloch_sim))
+
+The recon scripts require:
 - `mapVBVD` by Philipp Ehses and colleagues, for Siemens raw data reading: [[GitHub Link]](https://github.com/CIC-methods/FID-A/blob/master/inputOutput/mapVBVD)
 - `NUFFT` operators within the Image Reconconstruction Toolbox (IRT) by Jeff Fessler and colleagues: [[Download here]](http://web.eecs.umich.edu/~fessler/irt) [[GitHub link]](https://github.com/JeffFessler/mirt)
 - `FSL` Matlab tools and utilities for saving results to Nifti format: [[Download here]](https://fsl.fmrib.ox.ac.uk)
