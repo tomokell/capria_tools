@@ -48,6 +48,7 @@ This folder contains various helper functions that are used by `models`, `recon`
 
 ## External dependencies
 Tested using MATLAB 2017b, 2019a and 2024b. Some scripts may rely on the following toolboxes:
+- Optimization Toolbox
 - Signal Processing Toolbox
 - Image Processing Toolbox
 - Statistics and Machine Learning Toolbox
@@ -60,7 +61,7 @@ The recon scripts require:
 - `NUFFT` operators within the Image Reconconstruction Toolbox (IRT) by Jeff Fessler and colleagues: [[Download here]](http://web.eecs.umich.edu/~fessler/irt) [[GitHub link]](https://github.com/JeffFessler/mirt)
 - `FSL` Matlab tools and utilities for saving results to Nifti format: [[Download here]](https://fsl.fmrib.ox.ac.uk)
 
-Note that we make heavy use of a subset of Mark Chiew's Matlab image reconstruction code, which is included here for simplicity, but the full set can be found on his [website](https://users.fmrib.ox.ac.uk/~mchiew/Tools.html) or on [GitHub](https://github.com/mchiew/recon-tools-matlab).
+Note that we make heavy use of a subset of Mark Chiew's Matlab image reconstruction code, which is included here for simplicity, but the full set can be found on his [website](https://mchiew.github.io/Tools.html) or on [GitHub](https://github.com/mchiew/recon-tools-matlab).
 
 The quantification scripts rely on:
 - `FSL` for various utilities: [[Download here]](https://fsl.fmrib.ox.ac.uk)
@@ -153,13 +154,15 @@ Thanks to Philipp Ehses, Jeff Fessler, Michael Chappell and the FSL team for rel
 ## Contributors
 Thomas W. Okell: https://orcid.org/0000-0001-8258-0659
 
+Joseph G. Woods: https://orcid.org/0000-0002-0329-824X
+
 Mark Chiew: https://orcid.org/0000-0001-6272-8783
 
 ## How to cite
 
-Okell, Thomas W, & Chiew, Mark. (2022). Combined Angiography and Perfusion using Radial Imaging and Arterial Spin Labeling (CAPRIA) Tools: Initial release (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.6821643
+Okell, Thomas W, Woods, Joseph G & Chiew, Mark. (2025). Combined Angiography and Perfusion using Radial Imaging and Arterial Spin Labeling (CAPRIA) Tools (v2.0.0). Zenodo. https://doi.org/10.5281/zenodo.6821642
 
 ## Copyright
 
-Copyright © 2022, University of Oxford
+Copyright © 2025, University of Oxford
 
