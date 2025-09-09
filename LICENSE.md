@@ -17,7 +17,7 @@ THE SOFTWARE IS INTENDED FOR USE BY ACADEMICS CARRYING OUT RESEARCH AND NOT FOR 
 
 (d)	comply with all applicable laws and regulations with respect to their use of the Software; and 
 
-(e)	ensure that the Copyright Notice “Copyright © 2022, University of Oxford” appears prominently wherever the Software is reproduced and is referenced or cited with the Copyright Notice when the Software is described in any research publication or on any documents or other material created using the Software.
+(e)	ensure that the Copyright Notice “Copyright © 2025, University of Oxford” appears prominently wherever the Software is reproduced and is referenced or cited with the Copyright Notice when the Software is described in any research publication or on any documents or other material created using the Software.
 
 1.2	The Licensee may only reproduce, modify, transmit or transfer the Software where:
 
