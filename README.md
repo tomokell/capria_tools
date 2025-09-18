@@ -71,19 +71,24 @@ The quantification scripts rely on:
 For some of the plotting, we have also included the handy utility `hatchfill2` and associated license, but the original version can be found [here](https://uk.mathworks.com/matlabcentral/fileexchange/53593-hatchfill2).
 
 ## References
-A pre-print describing CAPRIA+S is available here:
+The paper describing CAPRIA+S is available here:
 
-- *Okell, T.W., Woods J.G. and Chiew M. Combined Angiographic, Structural and Perfusion Radial Imaging using Arterial Spin Labeling. bioRxiv. 2025. [[DOI link](https://doi.org/10.1101/2025.04.29.651006)]*
+- *Okell, T. W., Woods, J. G. & Chiew, M. Combined angiography and perfusion using radial imaging and arterial spin labeling with structural contrast. Magnetic Resonance in Med, In Press (2025) doi:10.1002/mrm.70073.
+ [[DOI link](https://doi.org/10.1002/mrm.70073)]*
 
 4D CAPRIA and optimisation using variable flip angle schedules and an LLR reconstruction is published here:
 
-- *Okell, T. W. & Chiew, M. Optimization of 4D Combined Angiography and Perfusion using Radial Imaging and Arterial Spin Labeling. Magnetic Resonance in Medicine. (2022) doi:10.1002/mrm.29558. [[DOI link](https://doi.org/10.1002/mrm.29558)]*
+- *Okell, T. W. & Chiew, M. Optimization of 4D combined angiography and perfusion using radial imaging and arterial spin labeling. Magnetic Resonance in Med 89, 1853–1870 (2023). [[DOI link](https://doi.org/10.1002/mrm.29558)]*
 
 A 2D implementation of CAPRIA was previously described in:
 
-- *Okell, T. W. Combined angiography and perfusion using radial imaging and arterial spin labeling. Magnetic Resonance in Medicine 81, 182–194 (2019).*
+- *Okell, T. W. Combined angiography and perfusion using radial imaging and arterial spin labeling. Magnetic Resonance in Medicine 81, 182–194 (2019). [[DOI link](https://doi.org/10.1002/mrm.27366)]*
 
-Code and data to reproduce the statistical analyses and figures in the 4D CAPRIA paper can be found here:
+Code and data to reproduce the statistical analyses and figures in the CAPRIA+S paper can be found here:
+
+- *Okell, T.W., Woods, J. G. & Chiew, M. Combined Angiography and Perfusion using Radial Imaging and Arterial Spin Labeling with Structural Contrast (CAPRIA+S): Data and Code to Reproduce Statistics and Figures. (Zenodo, 2025). doi:10.5281/ZENODO.17087137.* [[Zenodo link](https://doi.org/10.5281/ZENODO.17087137)]
+
+And similarly for the 4D CAPRIA paper:
 
 - *Okell, Thomas W & Chiew, Mark. 4D Combined Angiography and Perfusion using Radial Imaging and Arterial Spin Labeling (CAPRIA): Data and Code to Reproduce Statistics and Figures. (Zenodo, 2022). doi:10.5281/zenodo.7390441.* [[Zenodo link](https://zenodo.org/record/7390441)]
 
